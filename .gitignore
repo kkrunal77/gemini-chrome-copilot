@@ -1,0 +1,20 @@
+# Secrets and Environment Variables
+.env
+backend/.env
+
+# OS Files
+.DS_Store
+
+# Programming Languages / Build Artifacts
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+
+# Extension specific
+icons/logos_cropped.png
+icons/logos_cropped_brain.png
+logos_cropped.png
+logos_cropped_brain.png

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Copilot</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="settings-view" class="view hidden">
+    <h2>Welcome to Gemini Copilot</h2>
+    <p>Please enter your Gemini Flash API key to get started.</p>
+    <input type="password" id="api-key-input" placeholder="API Key" />
+    <button id="save-key-btn" class="primary-btn">Save Key</button>
+  </div>
+
+  <div id="main-view" class="view">
+    <header>
+      <div class="logo">✨ Gemini Copilot</div>
+      <button id="settings-btn" class="icon-btn" title="Settings">⚙️</button>
+    </header>
+
+    <div class="actions">
+      <button id="summarize-btn" class="action-btn">
+        <span class="icon">📝</span>
+        Summarize Page
+      </button>
+
+      <button id="context-action-btn" class="action-btn">
+        <span class="icon">🎯</span>
+        <span id="context-action-label">Smart Action</span>
+      </button>
+
+      <div class="insight-mode">
+        <select id="insight-dropdown">
+          <option value="">💡 Insight Mode...</option>
+          <option value="explain-5">Explain like I'm 5</option>
+          <option value="key-risks">What are the key risks?</option>
+          <option value="pros-cons">Pros & Cons</option>
+        </select>
+        <button id="insight-btn" class="secondary-btn">Go</button>
+      </div>
+    </div>
+
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Consulting Gemini...</p>
+    </div>
+
+    <div id="result-view" class="hidden">
+      <div class="result-header">
+        <h3>Result</h3>
+        <button id="clear-btn" class="icon-btn">🗑️</button>
+      </div>
+      <div id="result-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
